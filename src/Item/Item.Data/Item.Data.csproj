@@ -11,4 +11,8 @@
 		<Folder Include="Protos\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.9" />
+	</ItemGroup>
+
 </Project>
