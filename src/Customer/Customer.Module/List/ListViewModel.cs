@@ -1,7 +1,6 @@
 ﻿namespace Sample.App.Customer.Module.List
 {
     using System.Collections.Generic;
-    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -15,10 +14,6 @@
 
     using Remote.CustomerService;
 
-    [SuppressMessage(
-        "ReSharper",
-        "AsyncVoidLambda"
-    )]
     public class ListViewModel : BindableBase
     {
         private readonly CustomerService.CustomerServiceClient _grpc;
@@ -132,10 +127,6 @@
         {
             var customers = await _grpc.ListAsync(
                 new CustomerRequest()
-            );
-
-            await Task.Delay(
-                5_000
             );
 
             Customers = customers.Customer.ToList();

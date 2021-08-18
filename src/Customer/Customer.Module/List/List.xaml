@@ -23,9 +23,14 @@
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">
                 <MenuItem Header="Load data" Command="{Binding LoadData}" IsEnabled="{Binding IsEnabled}" />
+                <Separator />
+                <MenuItem Header="New" Command="{Binding NewCustomer}" IsEnabled="{Binding IsEnabled}" />
             </MenuItem>
         </Menu>
-        <DataGrid DockPanel.Dock="Top" ItemsSource="{Binding Customers}" IsReadOnly="True"
+        <DataGrid DockPanel.Dock="Top" 
+                  ItemsSource="{Binding Customers}" 
+                  SelectedItem="{Binding SelectedCustomer}"
+                  IsReadOnly="True"
                   IsEnabled="{Binding IsEnabled}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">

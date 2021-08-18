@@ -1,7 +1,9 @@
 ﻿namespace Sample.App.Customer.Module.Card
 {
-    public class CardViewModel
+    using Prism.Mvvm;
+
+    public class CardViewModel : BindableBase
     {
-        
+
     }
 }
