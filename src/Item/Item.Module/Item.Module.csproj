@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0-windows</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<RootNamespace>Sample.App.Item.Module</RootNamespace>
+		<Version>0.1.0</Version>
+	</PropertyGroup>
+
+</Project>
