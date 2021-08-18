@@ -6,7 +6,7 @@
     using System.Threading.Tasks;
 
     using Data;
-    using Data.Service;
+    using Data.Models;
 
     using Google.Protobuf.WellKnownTypes;
 
@@ -14,10 +14,10 @@
 
     using Microsoft.EntityFrameworkCore;
 
-    using Customer = Data.Models.Customer;
+    using Remote.CustomerService;
 
     public class CustomerService
-        : Data.Service.CustomerService.CustomerServiceBase
+        : Remote.CustomerService.CustomerService.CustomerServiceBase
     {
         private readonly CustomerDbContext _dbContext;
 
@@ -50,7 +50,7 @@
             ServerCallContext context
         )
         {
-            var filter = request.Customer;
+            var filter = request.Customer ?? new GrpcCustomer();
             var customerQuery = _dbContext.Customers.AsQueryable();
             var response = new ListResponse();
 
@@ -255,7 +255,7 @@
         }
 
         private static Customer MapCustomerFromGrpc(
-            Data.Service.Customer grpcCustomer
+            GrpcCustomer grpcCustomer
         )
         {
             var customer = new Customer
@@ -271,11 +271,11 @@
             return customer;
         }
 
-        private static Data.Service.Customer MapCustomerToGrpc(
+        private static GrpcCustomer MapCustomerToGrpc(
             Customer customer
         )
         {
-            var grpcCustomer = new Data.Service.Customer
+            var grpcCustomer = new GrpcCustomer
             {
                 Id = customer.Id,
                 Active = customer.Active,

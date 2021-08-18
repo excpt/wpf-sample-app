@@ -1,10 +1,10 @@
 ﻿syntax="proto3";
 
-option csharp_namespace = "Sample.App.Customer.Data.Service";
+option csharp_namespace = "Remote.CustomerService";
 
 import "google/protobuf/timestamp.proto";
 
-message Customer {
+message GrpcCustomer {
 	int32 id = 1;
 	string first_name = 2;
 	string last_name = 3;
@@ -19,7 +19,7 @@ message Request{
 }
 
 message CustomerRequest{
-	Customer customer = 1;
+	GrpcCustomer customer = 1;
 }
 
 message Response{
@@ -29,11 +29,11 @@ message Response{
 }
 
 message GetResponse {
-	Customer customer = 1;
+	GrpcCustomer customer = 1;
 }
 
 message ListResponse{
-	repeated Customer customer = 1;
+	repeated GrpcCustomer customer = 1;
 }
 
 service CustomerService

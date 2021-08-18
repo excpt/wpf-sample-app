@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Sample.App.Customer.Module.List.List"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:local="clr-namespace:Sample.App.Customer.Module.List"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance local:ListViewModel}"
+             d:DesignHeight="720"
+             d:DesignWidth="1280">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <prism:InvokeCommandAction Command="{Binding LoadData}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <DockPanel LastChildFill="True">
+        <Menu DockPanel.Dock="Top" />
+        <DataGrid DockPanel.Dock="Top" ItemsSource="{Binding Customers}" IsReadOnly="True" IsEnabled="{Binding IsEnabled}"/>
+    </DockPanel>
+</UserControl>

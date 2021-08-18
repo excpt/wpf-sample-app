@@ -14,12 +14,12 @@
 	    <PrivateAssets>all</PrivateAssets>
 	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 	  </PackageReference>
+	  <PackageReference Include="Prism.Wpf" Version="8.1.97" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Protobuf Include="..\Customer.Data\Protos\CustomerService.proto" GrpcServices="Client">
-	    <Link>Protos\CustomerService.proto</Link>
-	  </Protobuf>
+	  <ProjectReference Include="..\..\Kernel\Kernel.Desktop\Kernel.Desktop.csproj" />
+	  <ProjectReference Include="..\Customer.Client\Customer.Client.csproj" />
 	</ItemGroup>
 
 </Project>

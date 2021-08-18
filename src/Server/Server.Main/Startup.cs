@@ -15,7 +15,7 @@
         {
             services.AddDbContext<CustomerDbContext>(
                 options => options.UseSqlite(
-                    "Data Source=Customers.db;Version=3;Journal Mode=Persist;"
+                    "Data Source=Customers.db;"
                 )
             );
 
@@ -24,6 +24,12 @@
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetService<CustomerDbContext>();
+                context.Database.EnsureCreated();
+            }
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
