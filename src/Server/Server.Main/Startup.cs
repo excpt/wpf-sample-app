@@ -1,8 +1,11 @@
 ﻿namespace Sample.App.Server.Main
 {
+    using Customer.Data;
+    using Customer.Server;
+
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
-    using Microsoft.AspNetCore.Http;
+    using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
 
@@ -10,6 +13,12 @@
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<CustomerDbContext>(
+                options => options.UseSqlite(
+                    "Data Source=Customers.db;Version=3;Journal Mode=Persist;"
+                )
+            );
+
             services.AddGrpc();
         }
 
@@ -23,18 +32,7 @@
             app.UseRouting();
 
             app.UseEndpoints(
-                endpoints =>
-                {
-                    endpoints.MapGet(
-                        "/",
-                        async context =>
-                        {
-                            await context.Response.WriteAsync(
-                                "Communication with gRPC endpoints must be made through a gRPC client."
-                            );
-                        }
-                    );
-                }
+                endpoints => { endpoints.MapGrpcService<CustomerService>(); }
             );
         }
     }
