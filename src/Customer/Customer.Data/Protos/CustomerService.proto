@@ -1,8 +1,8 @@
 ﻿syntax="proto3";
 
-import "google/protobuf/timestamp.proto";
-
 option csharp_namespace = "Sample.App.Customer.Data.Service";
+
+import "google/protobuf/timestamp.proto";
 
 message Customer {
 	int32 id = 1;
@@ -10,8 +10,8 @@ message Customer {
 	string last_name = 3;
 	string company_name = 4;
 	bool active = 5;
-	Timestamp created_at = 6;
-	Timestamp updated_at = 7;
+	google.protobuf.Timestamp created_at = 6;
+	google.protobuf.Timestamp updated_at = 7;
 }
 
 message CreateRequest{
