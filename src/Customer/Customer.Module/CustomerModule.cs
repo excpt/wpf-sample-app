@@ -25,6 +25,8 @@
             containerRegistry.RegisterInstance(
                 client
             );
+
+            containerRegistry.RegisterForNavigation<Card.Card>();
         }
 
         public void OnInitialized(IContainerProvider containerProvider)

@@ -16,8 +16,22 @@
             <prism:InvokeCommandAction Command="{Binding LoadData}" />
         </i:EventTrigger>
     </i:Interaction.Triggers>
+    <UserControl.InputBindings>
+        <KeyBinding Key="F5" Command="{Binding LoadData}" />
+    </UserControl.InputBindings>
     <DockPanel LastChildFill="True">
-        <Menu DockPanel.Dock="Top" />
-        <DataGrid DockPanel.Dock="Top" ItemsSource="{Binding Customers}" IsReadOnly="True" IsEnabled="{Binding IsEnabled}"/>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Load data" Command="{Binding LoadData}" IsEnabled="{Binding IsEnabled}" />
+            </MenuItem>
+        </Menu>
+        <DataGrid DockPanel.Dock="Top" ItemsSource="{Binding Customers}" IsReadOnly="True"
+                  IsEnabled="{Binding IsEnabled}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <prism:InvokeCommandAction Command="{Binding DataGridDoubleClick}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </DataGrid>
     </DockPanel>
 </UserControl>
