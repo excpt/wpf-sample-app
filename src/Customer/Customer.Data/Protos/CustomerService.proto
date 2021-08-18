@@ -14,12 +14,34 @@ message Customer {
 	google.protobuf.Timestamp updated_at = 7;
 }
 
-message CreateRequest{
+message Request{
+	int32 id = 1;
+}
+
+message CustomerRequest{
 	Customer customer = 1;
 }
-message CreateResponse{}
+
+message Response{
+	bool success = 1;
+	int32 status_code = 2;
+	string status_message = 3;
+}
+
+message GetResponse {
+	Customer customer = 1;
+}
+
+message ListResponse{
+	repeated Customer customer = 1;
+}
 
 service CustomerService
 {
-	rpc Create(CreateRequest) returns (CreateResponse);
+	rpc Get(Request) returns (GetResponse);
+	rpc List(CustomerRequest) returns (ListResponse);
+	rpc Create(CustomerRequest) returns (Response);
+	rpc Update(CustomerRequest) returns (Response);
+	rpc Activate(Request) returns (Response);
+	rpc Deactivate(Request) returns (Response);
 }
