@@ -7,39 +7,45 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BD7654CD-01E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desktop", "Desktop", "{B294C162-3094-4810-987B-57390D06EF53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desktop.Main", "src\Desktop\Desktop.Main\Desktop.Main.csproj", "{60909F52-CF36-4B3E-9C92-A03B9EF9ACCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desktop.Main", "src\Desktop\Desktop.Main\Desktop.Main.csproj", "{60909F52-CF36-4B3E-9C92-A03B9EF9ACCF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{00356E25-4641-4C75-A4BD-F20E880C0574}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server.Main", "src\Server\Server.Main\Server.Main.csproj", "{14B20237-9604-4478-8D09-F9AD71F0923D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Main", "src\Server\Server.Main\Server.Main.csproj", "{14B20237-9604-4478-8D09-F9AD71F0923D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Customer", "Customer", "{19C30F9A-AEAB-4072-9680-746A09B44AB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Data", "src\Customer\Customer.Data\Customer.Data.csproj", "{E35EE783-EE79-4C2D-93A0-678A90BCFE59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Data", "src\Customer\Customer.Data\Customer.Data.csproj", "{E35EE783-EE79-4C2D-93A0-678A90BCFE59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Server", "src\Customer\Customer.Server\Customer.Server.csproj", "{D5ACA229-EB46-4B0F-A63C-EC9219F8987E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Server", "src\Customer\Customer.Server\Customer.Server.csproj", "{D5ACA229-EB46-4B0F-A63C-EC9219F8987E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item", "Item", "{FEE35119-8262-4023-A67F-0FBDF20FD69D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Item.Data", "src\Item\Item.Data\Item.Data.csproj", "{D70888F9-CBDB-4881-8B8C-C00411CCE631}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Item.Data", "src\Item\Item.Data\Item.Data.csproj", "{D70888F9-CBDB-4881-8B8C-C00411CCE631}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Item.Server", "src\Item\Item.Server\Item.Server.csproj", "{179C74CD-5232-44B3-BAB6-10878556C3EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Item.Server", "src\Item\Item.Server\Item.Server.csproj", "{179C74CD-5232-44B3-BAB6-10878556C3EB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kernel", "Kernel", "{03BC0F8C-2285-4499-8210-09642CCC252D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kernel.Common", "src\Kernel\Kernel.Common\Kernel.Common.csproj", "{C7627F21-3940-492E-971F-62A6C72014C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kernel.Common", "src\Kernel\Kernel.Common\Kernel.Common.csproj", "{C7627F21-3940-492E-971F-62A6C72014C3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{18E09E4A-880B-4771-9457-11642E874665}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Data", "src\Order\Order.Data\Order.Data.csproj", "{0B519B58-C522-4AEB-A150-6CAD4AAE8B70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Data", "src\Order\Order.Data\Order.Data.csproj", "{0B519B58-C522-4AEB-A150-6CAD4AAE8B70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Server", "src\Order\Order.Server\Order.Server.csproj", "{1AFC595D-45E9-46A4-B387-4FF6B90BA6CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Server", "src\Order\Order.Server\Order.Server.csproj", "{1AFC595D-45E9-46A4-B387-4FF6B90BA6CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Module", "src\Customer\Customer.Module\Customer.Module.csproj", "{261BC9D0-1CF3-43AE-B41B-D9C21E3A348A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Module", "src\Customer\Customer.Module\Customer.Module.csproj", "{261BC9D0-1CF3-43AE-B41B-D9C21E3A348A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Module", "src\Order\Order.Module\Order.Module.csproj", "{2E6709B2-5F36-425D-BCDA-554D8CF8D914}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Module", "src\Order\Order.Module\Order.Module.csproj", "{2E6709B2-5F36-425D-BCDA-554D8CF8D914}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Item.Module", "src\Item\Item.Module\Item.Module.csproj", "{DF6B1849-4BDC-4E3C-B0AD-85B3787882C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Item.Module", "src\Item\Item.Module\Item.Module.csproj", "{DF6B1849-4BDC-4E3C-B0AD-85B3787882C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B8528F0B-2D09-403E-82C8-CA1F97759958}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,9 +55,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{60909F52-CF36-4B3E-9C92-A03B9EF9ACCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -199,6 +202,9 @@ Global
 		{DF6B1849-4BDC-4E3C-B0AD-85B3787882C5}.Release|x86.ActiveCfg = Release|Any CPU
 		{DF6B1849-4BDC-4E3C-B0AD-85B3787882C5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B294C162-3094-4810-987B-57390D06EF53} = {BD7654CD-01E6-476C-A4EC-05197B6336E8}
 		{60909F52-CF36-4B3E-9C92-A03B9EF9ACCF} = {B294C162-3094-4810-987B-57390D06EF53}
@@ -218,5 +224,8 @@ Global
 		{261BC9D0-1CF3-43AE-B41B-D9C21E3A348A} = {19C30F9A-AEAB-4072-9680-746A09B44AB6}
 		{2E6709B2-5F36-425D-BCDA-554D8CF8D914} = {18E09E4A-880B-4771-9457-11642E874665}
 		{DF6B1849-4BDC-4E3C-B0AD-85B3787882C5} = {FEE35119-8262-4023-A67F-0FBDF20FD69D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B5AFF47-B2DA-47AC-8A90-92F8DB738972}
 	EndGlobalSection
 EndGlobal
