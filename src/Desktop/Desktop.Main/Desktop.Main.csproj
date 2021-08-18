@@ -9,4 +9,10 @@
 		<AssemblyName>SampleApp</AssemblyName>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Customer\Customer.Module\Customer.Module.csproj" />
+	  <ProjectReference Include="..\..\Item\Item.Module\Item.Module.csproj" />
+	  <ProjectReference Include="..\..\Order\Order.Module\Order.Module.csproj" />
+	</ItemGroup>
+
 </Project>

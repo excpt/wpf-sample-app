@@ -11,4 +11,10 @@
 		<PackageReference Include="Grpc.AspNetCore" Version="2.34.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Customer\Customer.Server\Customer.Server.csproj" />
+	  <ProjectReference Include="..\..\Item\Item.Server\Item.Server.csproj" />
+	  <ProjectReference Include="..\..\Order\Order.Server\Order.Server.csproj" />
+	</ItemGroup>
+
 </Project>
