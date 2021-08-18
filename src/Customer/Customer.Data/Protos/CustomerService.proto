@@ -1,0 +1,25 @@
+﻿syntax="proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Sample.App.Customer.Data.Service";
+
+message Customer {
+	int32 id = 1;
+	string first_name = 2;
+	string last_name = 3;
+	string company_name = 4;
+	bool active = 5;
+	Timestamp created_at = 6;
+	Timestamp updated_at = 7;
+}
+
+message CreateRequest{
+	Customer customer = 1;
+}
+message CreateResponse{}
+
+service CustomerService
+{
+	rpc Create(CreateRequest) returns (CreateResponse);
+}

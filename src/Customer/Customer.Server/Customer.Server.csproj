@@ -6,4 +6,23 @@
 		<Version>0.1.0</Version>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <PackageReference Include="Google.Protobuf" Version="3.13.0" />
+	  <PackageReference Include="Grpc.AspNetCore.Server" Version="2.32.0" />
+	  <PackageReference Include="Grpc.Tools" Version="2.32.0">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Customer.Data\Customer.Data.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Protobuf Include="..\Customer.Data\Protos\CustomerService.proto" GrpcServices="Server">
+	    <Link>Protos\CustomerService.proto</Link>
+	  </Protobuf>
+	</ItemGroup>
+
 </Project>
