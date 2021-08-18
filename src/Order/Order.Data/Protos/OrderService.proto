@@ -24,10 +24,22 @@ message OrderRequest {
 	repeated int32 customer_ids = 2;
 }
 
-message ListResponse {
+message CreateOrder {
+	string id = 1; // Client Request GUID
+	Order order = 2;
+}
 
+message ListResponse {
+	repeated Order orders = 1;
+}
+
+message Response{
+	bool success = 1;
+	int32 status_code = 2;
+	string status_message = 3;
 }
 
 service OrderService {
+	rpc Create(CreateOrder) returns (Response);
 	rpc List(OrderRequest) returns (ListResponse);
 }

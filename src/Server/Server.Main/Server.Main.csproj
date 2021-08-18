@@ -22,4 +22,10 @@
 	  <ProjectReference Include="..\..\Order\Order.Server\Order.Server.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Update="akka.hcon">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
 </Project>

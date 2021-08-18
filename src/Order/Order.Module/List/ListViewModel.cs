@@ -7,7 +7,7 @@
     {
         public ListViewModel() =>
             LoadData = new DelegateCommand(
-                () => 
+                () => { }
                 );
 
         public DelegateCommand LoadData { get; }

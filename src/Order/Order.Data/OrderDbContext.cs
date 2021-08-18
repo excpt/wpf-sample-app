@@ -1,19 +1,24 @@
-﻿namespace Sample.App.Customer.Data
+﻿namespace Sample.App.Order.Data
 {
     using Microsoft.EntityFrameworkCore;
 
     using Models;
 
-    public sealed class CustomerDbContext : DbContext
+    public class OrderDbContext : DbContext
     {
-        public CustomerDbContext() { }
+        public OrderDbContext() { }
 
-        public CustomerDbContext(DbContextOptions<CustomerDbContext> options)
+        public OrderDbContext(DbContextOptions<OrderDbContext> options)
             : base(
                 options
             ) { }
 
-        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderLine> OrderLines { get; set; }
+
+        public static OrderDbContext CreateContext(
+        ) =>
+            new();
 
         protected override void OnConfiguring(
             DbContextOptionsBuilder optionsBuilder
@@ -22,7 +27,7 @@
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlite(
-                    "Data Source=Customers.db"
+                    "Data Source=Orders.db"
                 );
             }
 

@@ -6,4 +6,24 @@
 	  <Version>0.1.0</Version>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Akka" Version="1.4.24" />
+    <PackageReference Include="Google.Protobuf" Version="3.13.0" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.32.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.32.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Order.Data\Order.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\Order.Data\Protos\OrderService.proto" GrpcServices="Server">
+      <Link>Protos\OrderService.proto</Link>
+    </Protobuf>
+  </ItemGroup>
+
 </Project>
