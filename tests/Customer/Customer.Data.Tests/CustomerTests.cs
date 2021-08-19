@@ -4,9 +4,7 @@ namespace Customer.Data.Tests
 
     using Xunit;
 
-
     // Setup und Tear down je Test
-
 
     // Setup / Tear down
     public abstract class TestSetupBase : IDisposable

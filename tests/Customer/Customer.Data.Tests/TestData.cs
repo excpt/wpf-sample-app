@@ -50,6 +50,43 @@
             }
 
             [Theory]
+            [InlineData(
+                1,
+                2,
+                3,
+                4
+            )]
+            [InlineData(
+                0,
+                2,
+                3,
+                4
+            )]
+            public void RunInline(
+                int first,
+                int second,
+                int third,
+                int fourth
+            )
+            {
+                Assert.True(
+                    first > 0
+                );
+
+                Assert.True(
+                    second > 0
+                );
+
+                Assert.True(
+                    third > 0
+                );
+
+                Assert.True(
+                    fourth > 0
+                );
+            }
+
+            [Theory]
             [MemberData(
                 nameof(GetNumbersFromDataGenerator)
             )]
